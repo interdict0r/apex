@@ -31,7 +31,7 @@ public class Hud extends Gui{
 
     @SubscribeEvent
     public void RenderOverlay(RenderGameOverlayEvent event) {
-
+        Collections.sort(Main.moduleManager.modules, new ModuleComparator());
         ScaledResolution sr = new ScaledResolution(mc);
         FontRenderer fr = mc.fontRenderer;
 
